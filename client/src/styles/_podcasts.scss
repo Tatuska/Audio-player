@@ -1,0 +1,11 @@
+.podcasts {
+  width: 50%;
+  margin: auto;
+  &__title {
+    text-align: center;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+}

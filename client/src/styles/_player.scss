@@ -1,0 +1,25 @@
+.player {
+  background: #48acf0;
+  margin-right: 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  &__audio {
+    width: 100%;
+  }
+  &__image {
+    height: 3rem;
+    width: 3rem;
+    background-color: #ccdde2;
+    border-radius: 20%;
+    margin-right: 1rem;
+  }
+  &__description {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+  }
+  &__name {
+    font-size: 2rem;
+  }
+}

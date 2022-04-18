@@ -1,0 +1,25 @@
+.episode {
+  margin-bottom: 2rem;
+
+  &__image {
+    height: 5rem;
+    width: 5rem;
+    background-color: #ccdde2;
+    border-radius: 20%;
+    margin-right: 1rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #93a3bc;
+    border-radius: 1rem;
+    width: 100%;
+    border: none;
+  }
+}

@@ -1,0 +1,12 @@
+.button-set {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 4rem 0;
+  &__button {
+    background-color: #ccdde2;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none;
+  }
+}
