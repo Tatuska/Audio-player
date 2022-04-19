@@ -1,3 +1,9 @@
 .audio-bar {
-  width: 100%;
+  &__details {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__progress {
+    width: 100%;
+  }
 }

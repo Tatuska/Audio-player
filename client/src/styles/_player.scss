@@ -6,6 +6,7 @@
   &__audio {
     width: 100%;
   }
+
   &__image {
     height: 3rem;
     width: 3rem;
@@ -13,12 +14,14 @@
     border-radius: 20%;
     margin-right: 1rem;
   }
+
   &__description {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
     justify-content: space-between;
   }
+
   &__name {
     font-size: 2rem;
   }

@@ -15,12 +15,13 @@ export const usePlayer = (
   const [isMarkerActive, setIsMarkerActive] = useState(false);
 
   const toggleTrack = () => {
-    if (!isPlaying && audioRef.current) {
+    const audio = audioRef.current;
+    if (!isPlaying && audio) {
       setIsPlaying(true);
-      audioRef.current.play();
-    } else if (audioRef.current) {
+      audio.play();
+    } else if (audio) {
       setIsPlaying(false);
-      audioRef.current.pause();
+      audio.pause();
     }
   };
 
@@ -29,8 +30,7 @@ export const usePlayer = (
 
   useEffect(() => {
     const currentMarker = episode.markers.find(
-      (marker: IMarker) =>
-        currentTime &&
+      (marker) =>
         marker.start <= currentTime &&
         currentTime < marker.start + marker.duration
     );

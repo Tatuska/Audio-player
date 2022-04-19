@@ -38,6 +38,7 @@ const Player: FC<IPlayer> = ({
       audio.currentTime = time;
     }
   };
+  
   return episode ? (
     <div className="player">
       <div className="player__description">

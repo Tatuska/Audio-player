@@ -15,9 +15,9 @@ const AudioBar: FC<IAudioBar> = ({ duration = 0, setNewTime, currentTime }) => {
     const target = e.target as HTMLProgressElement;
     const barStart = target.offsetLeft + window.scrollX;
     const barWidth = target.offsetWidth;
-    const clickPositionInBar = clickPositionInPage - barStart;
+    const clickedSecond = clickPositionInPage - barStart;
     const timePerPixel = duration / barWidth;
-    return timePerPixel * clickPositionInBar;
+    return timePerPixel * clickedSecond;
   };
 
   useEffect(() => {
@@ -25,15 +25,17 @@ const AudioBar: FC<IAudioBar> = ({ duration = 0, setNewTime, currentTime }) => {
   }, [currentTime]);
 
   return (
-    <div>
-      {progressTime && <span>{Math.round(progressTime)}</span>}
+    <div className="audio-bar">
+      <div className="audio-bar__details">
+        {progressTime && <span>{Math.round(progressTime)}</span>}
+        {!isNaN(duration) ? <span>{Math.round(duration)}</span> : null}
+      </div>
       <progress
         value={progressTime}
         max={!isNaN(duration) ? duration : 0}
         onMouseDown={(e) => handleProgressDrag(e)}
-        className="audio-bar"
+        className="audio-bar__progress"
       ></progress>
-      {!isNaN(duration) ? <span>{duration}</span> : null}
     </div>
   );
 };

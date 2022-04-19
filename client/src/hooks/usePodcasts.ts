@@ -33,6 +33,7 @@ export const usePodcasts = () => {
   useEffect(() => {
     setSelectedEpisode(episodes[selectedEpisodeIndex]);
   }, [selectedEpisodeIndex, episodes]);
+  
   return {
     episodes,
     selectEpisode,
